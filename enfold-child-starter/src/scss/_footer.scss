@@ -1,0 +1,15 @@
+/**
+Footer.scss
+Create a Page for a footer, then assign section CSS class `footer-section`
+**/
+#top{
+    .footer-page-content,
+    .footer-page-content .footer-section{
+        border-top: 0;
+    }
+    .footer-section{
+        .container{
+            padding-top: 0 !important;
+        }
+    }
+}

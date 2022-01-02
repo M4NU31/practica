@@ -1,0 +1,20 @@
+/*
+Sections
+*/
+#top {
+	.avia-section {
+		position: relative;
+		min-height: initial;
+		.container{
+			z-index: 2;
+		}
+		&.avia-section-huge {
+			.content, .sidebar {
+				@media only screen and (max-width: 989px) {
+					padding-top: 75px;
+					padding-bottom: 75px;
+				}
+			}
+		}
+	}
+}

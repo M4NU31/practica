@@ -1,0 +1,57 @@
+html{
+	--scrollBarWidth: 0px;
+}
+
+.responsive .container{
+    max-width: $container;
+}
+
+#top .avia-section.avia-shadow{
+	box-shadow: none;
+}
+
+.avia_textblock{
+	p{
+		& > a{
+			text-decoration: underline;
+		}
+	}
+}  
+strong{
+	font-weight: $bold;
+}
+
+blockquote{
+	font-size: 22px;
+}
+
+#top .av-share-box{
+	margin: 0;
+	float: none;
+	.av-share-link-description{
+		display: none;
+	}
+	.av-share-box-list{
+		border: none;
+		display: flex;
+		flex-direction: row;
+		li{
+			border: none;
+			&:not(:last-child){
+				margin-right: 15px;
+			}
+			a{
+				padding: 0;
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				font-size: 18px;
+			}
+			.avia_hidden_link_text,
+			.avia-related-tooltip{
+				display: none !important;
+			}
+		}
+	}
+}

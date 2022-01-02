@@ -1,0 +1,15 @@
+/* Shortcodes */
+$small-hr-width: 60px;
+
+.hr:not(.hr-invisible){
+	.hr-inner {
+		display: block;
+		height: 1px;
+		background: $black;
+	}
+	&.hr-short{
+		.hr-inner {
+			width: $small-hr-width;
+		}
+	}
+}

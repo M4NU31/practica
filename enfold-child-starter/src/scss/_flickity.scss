@@ -1,0 +1,62 @@
+#top{
+    /* Skin default Flickity Icon */
+	.flickity-button{
+        transform: translateY(-50%);
+        padding: 0;
+        width: 26px;
+        height: 26px;
+        border-radius: 0;
+        background: transparent;
+        line-height: 26px;
+        opacity: 1;
+        &::after{
+            content: '';
+            font-family: '';
+            position: absolute;
+            font-size: 20px;
+            width: 26px;
+            height: 26px;
+            line-height: 26px;
+            text-align: center;
+            transition: color ease 0.25s;
+            color: $black;
+            background: transparent;
+            top: 0;
+            left: 0;
+        }
+        &.previous{
+            transform: scaleX(-1) translateY(-50%);
+        }
+        .flickity-button-icon{
+            display: none;
+        }
+        &:hover,
+        &:active{
+            &::after{
+                color: blue;
+            }
+        }
+    }
+
+    /* Defaults */
+    .flickity-viewport{
+        transition: height ease 0.2s;
+        /*
+		&[style*='height']{
+			.ep-flickity-slide{
+				height: 100%;
+			}
+        }
+        */
+    }
+    
+    .flickity-enabled.is-fade{
+        .ep-flickity-slide{
+            opacity: 0 !important;
+            transition: opacity ease-in-out 0.2s;
+            &.is-selected{
+                opacity: 1 !important;
+            }
+        }
+	}
+}

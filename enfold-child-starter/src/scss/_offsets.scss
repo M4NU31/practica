@@ -1,0 +1,185 @@
+#top .avia-section:not(.single-hero-section):not(.single-content-section){
+	.container{
+		@media only screen and (min-width: 1025px) and (max-width: #{$container}){
+			width: $max-width-desktop;
+		}
+	}
+}
+
+// New Offset
+$columnsSize:
+".av_one_fifth" ".av_four_fifth" 5 1.25,
+".av_one_fourth" ".av_three_fourth" 4 1.33333,
+".av_one_third" ".av_two_third" 3 1.5,
+".av_two_fifth" ".av_three_fifth" 2.5 1.66666,
+".av_one_half" ".av_one_half" 2 2,
+".av_three_fifth" ".av_two_fifth" 1.66666 2.5,
+".av_two_third" ".av_one_third" 1.5 3,
+".av_three_fourth" ".av_one_fourth" 1.33333 4,
+".av_four_fifth" ".av_one_fifth" 1.25 5,
+".one_sixth" ".five_sixth" 6 1.2;
+
+#top .avia-section:not(.avia-section-fwd){
+	.flex_column_table{
+		&.offset-left,
+		&.offset-right{
+			max-width: $max-width-offset;
+			width: calc( 100% + #{$half-container-with} );
+			display: flex;
+			flex-wrap: wrap;
+			@media only screen and (max-width: #{$container}){
+				width: calc( 100% + #{$half-container-with2} );
+			}
+			@media only screen and (max-width: 1024px){
+				width: calc( 100% + 50px );
+			}
+			.av-flex-placeholder{
+				display: none !important;
+			}
+			.flex_column{
+				display: flex;
+				margin-left: 0;
+				margin-right: 0;
+				.flex-column-inner{
+					width: 100%;
+				}
+				&.av-align-top{
+					align-items: flex-start;
+				}
+				&.av-align-middle{
+					align-items: center;
+				}
+				&.av-align-bottom{
+					align-items: flex-end;
+				}
+			}
+			& + *{
+                clear: both;
+            }
+		}
+		&.offset-right{
+			float: right;
+		}
+		@each $classes1, $classes2, $divisor1, $divisor2 in $columnsSize {
+			&.offset-left{
+				& > .flex_column:first-child{
+					&#{$classes1}{
+						width: calc( ( 100% / #{$divisor1} ) - ( ( ( ( 100vw - var(--scrollBarWidth) ) - #{$container} ) / 2 ) + #{$offset-gap} ) / #{$divisor1} );
+						@media only screen and (max-width: #{$container}){
+							width: calc( ( 100% / #{$divisor1} ) - ( ( ( ( ( 100vw - var(--scrollBarWidth) ) - 95vw ) / 2 ) + #{$offset-gap} ) / #{$divisor1} ) );
+						}
+						@media only screen and (max-width: 1024px){
+							width: calc( ( 100% / #{$divisor1} ) - ( 50px / #{$divisor1} ) );
+						}
+						@media only screen and (min-width: 1601px){
+							width: calc( ( 100% / #{$divisor1} ) - ( #{$half-container-with-fixed} / #{$divisor1} ) );
+						}
+					}
+				}
+				& > .flex_column:last-child{
+					&#{$classes2}{
+						width: calc( ( 100% / #{$divisor2} ) + ( ( ( ( 100vw - var(--scrollBarWidth) ) - #{$container} ) / 2 ) + #{$offset-gap} ) / #{$divisor1} );
+						@media only screen and (max-width: #{$container}){
+							width: calc( ( 100% / #{$divisor2} ) + ( ( ( ( ( 100vw - var(--scrollBarWidth) ) - 95vw ) / 2 ) + #{$offset-gap} ) / #{$divisor1} ) );
+						}
+						@media only screen and (max-width: 1024px){
+							width: calc( ( 100% / #{$divisor2} ) + ( 50px / #{$divisor1} ) );
+						}
+						@media only screen and (min-width: 1601px){
+							width: calc( ( 100% / #{$divisor2} ) + ( #{$half-container-with-fixed} / #{$divisor1} ) );
+						}
+					}
+				}
+			}
+			&.offset-right{
+				& > .flex_column:first-child{
+					&#{$classes1}{
+						width: calc( ( 100% / #{$divisor1} ) + ( ( ( ( 100vw - var(--scrollBarWidth) ) - #{$container} ) / 2 ) + #{$offset-gap} ) / #{$divisor2} );
+						@media only screen and (max-width: #{$container}){
+							width: calc( ( 100% / #{$divisor1} ) + ( ( ( ( ( 100vw - var(--scrollBarWidth) ) - 95vw ) / 2 ) + #{$offset-gap} ) / #{$divisor2} ) );
+						}
+						@media only screen and (max-width: 1024px){
+							width: calc( ( 100% / #{$divisor1} ) + ( 50px / #{$divisor2} ) );
+						}
+						@media only screen and (min-width: 1601px){
+							width: calc( ( 100% / #{$divisor1} ) + ( #{$half-container-with-fixed} / #{$divisor2} ) );
+						}
+					}
+				}
+				& > .flex_column:last-child{
+					&#{$classes2}{
+						width: calc( ( 100% / #{$divisor2} ) - ( ( ( ( 100vw - var(--scrollBarWidth) ) - #{$container} ) / 2 ) + #{$offset-gap} ) / #{$divisor2} );
+						@media only screen and (max-width: #{$container}){
+							width: calc( ( 100% / #{$divisor2} ) - ( ( ( ( ( 100vw - var(--scrollBarWidth) ) - 95vw ) / 2 ) + #{$offset-gap} ) / #{$divisor2} ) );
+						}
+						@media only screen and (max-width: 1024px){
+							width: calc( ( 100% / #{$divisor2} ) - ( 50px / #{$divisor2} ) );
+						}
+						@media only screen and (min-width: 1601px){
+							width: calc( ( 100% / #{$divisor2} ) - ( #{$half-container-with-fixed} / #{$divisor2} ) );
+						}
+					}
+				}
+			}
+		}
+		&.av-break-at-tablet-flextable{
+			@media only screen and (max-width: 989px) and (min-width: 768px){
+				width: 100%;
+			}
+			&.offset-left,
+			&.offset-right{
+				@media only screen and (max-width: 989px) and (min-width: 768px){
+					width: 100%;
+					float: none;
+				}
+			}
+			&.offset-fwd-mobile{
+				&.offset-left{
+					& > .flex_column:last-child{
+						@media only screen and (max-width: 989px) and (min-width: 768px){
+							width: calc( 100% + 100px ) !important;
+							margin-left: -50px !important;
+							margin-right: -50px !important;
+						}
+					}
+				}
+				&.offset-right{
+					& > .flex_column:first-child{
+						@media only screen and (max-width: 989px) and (min-width: 768px){
+							width: calc( 100% + 100px ) !important;
+							margin-left: -50px !important;
+							margin-right: -50px !important;
+						}
+					}
+				}
+			}
+		}
+		&.offset-left,
+		&.offset-right{
+			@media only screen and (max-width: 767px){
+				width: 100%;
+				float: none;
+			}
+			&.offset-fwd-mobile{
+				&.offset-left{
+					& > .flex_column:last-child{
+						@media only screen and (max-width: 767px){
+							width: calc( 100% + 15vw ) !important;
+							margin-left: -7.5vw !important;
+							margin-right: -7.5vw !important;
+						}
+					}
+				}
+				&.offset-right{
+					& > .flex_column:first-child{
+						@media only screen and (max-width: 767px){
+							width: calc( 100% + 15vw ) !important;
+							margin-left: -7.5vw !important;
+							margin-right: -7.5vw !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}

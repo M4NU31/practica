@@ -1,0 +1,25 @@
+{
+  "name": "child",
+  "version": "1.0.0",
+  "description": "Child",
+  "author": "GraphicLux",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-git": "^2.10.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "vinyl-named": "^1.1.0",
+    "webpack-stream": "^5.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Graphic-Lux/enfold-child-starter"
+  }
+}

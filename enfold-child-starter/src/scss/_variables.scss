@@ -1,0 +1,40 @@
+/* Colors */
+$white: white;
+$black: black;
+
+/* Typography */
+$h1: 50px;
+$h2: 35px;
+$h3: 28px;
+$h4: 22px; 
+$h5: 20px;
+$h6: 16px;
+
+$h1-tablet: 40px;
+$h2-tablet: 30px;
+$h3-tablet: 25px;
+
+$heading-font-family: sans-serif;
+$body-font-family: sans-serif;
+
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+
+$box-shadow: 0 10px 40px 0 rgba(0,0,0,0.2);
+
+/* Sizes */
+$container: 1310px;
+$container-single: 830px;
+$max-width-desktop: 95%;
+$offset-gap: 50px;
+
+$half-container-with: calc( ( ( ( 100vw - var(--scrollBarWidth) ) - #{$container} ) / 2 ) + #{$offset-gap} );
+$half-container-with2: calc( ( ( ( 100vw - var(--scrollBarWidth) ) - 95vw ) / 2 ) + #{$offset-gap} );
+$a-quater-with-1: calc( ( ( ( ( 100vw - var(--scrollBarWidth) ) - #{$container} ) / 2 ) + #{$offset-gap} ) / 2 );
+$a-quater-with-2: calc( ( ( ( ( 100vw - var(--scrollBarWidth) ) - 95vw ) / 2 ) + #{$offset-gap} ) / 2 );
+
+$half-container-with-fixed: calc( ( ( ( 1600px - var(--scrollBarWidth) ) - #{$container} ) / 2 ) + #{$offset-gap} );
+$max-width-offset: calc( #{$container} + #{$half-container-with-fixed} - ( #{$offset-gap} * 2 ) );

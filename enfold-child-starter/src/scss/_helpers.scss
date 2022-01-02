@@ -1,0 +1,121 @@
+/**
+* These are helper CSS classes for misc use, almost all properties carry the !important rule here
+* Keep it dead simple
+*/
+
+.bring-above {
+	position: relative !important;
+	z-index: 4 !important;
+}
+
+.narrow > .container,
+.avia_textblock.narrow,
+.flex_column_table.narrow {
+	max-width: 1000px !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	float: none;
+}
+
+.av_inherit_color * {
+	color: inherit !important;
+}
+
+.nolink {
+	cursor: pointer !important;
+	pointer-events: none !important;
+}
+
+.has-box-shadow{
+	box-shadow: $box-shadow;
+}
+
+.two-col-ul {
+	@media only screen and (min-width: 480px) {
+		column-count: 2 !important;
+	}
+}
+
+.no-bg{
+	background-image: none !important;
+}
+
+.no-bg-mobile{
+	@media only screen and (max-width: 767px) {
+		background-image: none !important;
+	}
+}
+
+.no-bg-tablet{
+	@media only screen and (max-width: 989px) {
+		background-image: none !important;
+	}
+}
+
+.no-br-mobile br{
+	@media only screen and (max-width: 767px){
+		display: none !important;
+	}
+}
+
+
+.fwd-phone{
+	@media only screen and (max-width: 480px){
+		margin-left: -7.5vw !important;
+		margin-right: -7.5vw !important;
+		width: auto !important;
+	}
+}
+
+.fwd-mobile{
+	@media only screen and (max-width: 767px){
+		margin-left: -7.5vw !important;
+		margin-right: -7.5vw !important;
+		width: auto !important;
+	}
+}
+
+.fwd-tablet{
+	@media only screen and (max-width: 989px){
+		margin-left: -7.5vw !important;
+		margin-right: -7.5vw !important;
+		width: auto !important;
+	}
+}
+
+	
+.img-has-shadow{
+	img{
+		box-shadow: -5px 10px 25px rgba($color: $black, $alpha: 0.16);
+	}
+}
+
+.img-fwd-phone{
+	.avia-image-container-inner{
+		&, img{
+			@media only screen and (max-width: 480px){
+				width: 100% !important;
+			}
+		}
+	}
+}
+
+.img-fwd-mobile{
+	.avia-image-container-inner{
+		&, img{
+			@media only screen and (max-width: 767px){
+				width: 100% !important;
+			}
+		}
+	}
+}
+
+.img-fwd-tablet{
+	.avia-image-container-inner{
+		&, img{
+			@media only screen and (max-width: 989px){
+				width: 100% !important;
+			}
+		}
+	}
+}

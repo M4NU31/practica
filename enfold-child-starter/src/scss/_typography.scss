@@ -1,0 +1,186 @@
+#top{
+	font-family: $body-font-family;
+	font-weight: $regular;  
+	font-size: 16px;
+	
+	h1, h2, h3, h4, h5, h6,
+	.h1, .h2, .h3, .h4, .h5, .h6{
+		font-family: $heading-font-family;
+		text-transform: none;
+		line-height: 1.1;
+	}
+
+	h1, .h1 {
+		font-size: $h1-tablet;
+		@media only screen and (min-width: 1100px){
+			font-size: $h1;
+		}
+	}
+	
+	h2, .h2 {
+		font-size: $h2-tablet;
+		@media only screen and (min-width: 1100px){
+			font-size: $h2;
+		}
+	}
+	
+	h3, .h3 {
+		font-size: $h3-tablet;
+		@media only screen and (min-width: 1100px){
+			font-size: $h3;
+		}
+	}
+	
+	h4, .h4 {
+		font-size: $h4;
+	}
+	
+	h5, .h5 {
+		font-size: $h5;
+	}
+	
+	h6, .h6 {
+		font-size: $h6;
+	}
+	
+	.av-subheading{
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		font-family: $heading-font-family;
+		font-size: 16px;
+	}
+
+	.ep-custom-menu-element,
+	.av-share-box,
+	.ep-social-bookmarks-wrapper,
+	.ep-icon-list-container{
+		ul{
+			margin: 0;
+			li{
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+		}
+	}
+
+	p, .entry-content-wrapper li{
+		strong{
+			font-weight: $bold;
+		}
+		a:not(.avia-button){
+			transition: color ease 0.2s;
+			&:hover{
+
+			}
+		}
+	}
+
+	em{
+		font-style: italic;
+	}
+	
+	p{
+		margin: 0 0 0.85em 0;
+	}
+
+	.entry-content-wrapper{
+		ul:not(.blocks-gallery-grid){
+            margin: 0;
+            padding: 0;
+            li:not(.ep-iconlist-item):not(.ep-social-bookmarks):not(.av-share-link):not(.menu-item){
+                padding: 0 0 0 1.65em;
+                list-style: none;
+                position: relative;
+                margin: 1em 0;
+                &::before{
+                    content: '';
+					font-family: '';
+					position: absolute;
+					left: 0;
+					top: 0.21em;
+					font-size: 0.8em;
+                }
+            }
+        }
+        ol:not(.flickity-page-dots){
+            margin: 0 0 0 1.2em;
+            padding: 0;
+            li{
+                list-style: decimal;
+                padding-left: 0.5em;
+                &::before{
+                    display: none;
+                }
+            }
+        }
+	}
+
+
+	.main_color{
+		background-color: $white;
+		color: $black;
+
+		a:not([class*='button']){
+			color: blue;
+		}
+
+		h1, h2, h3, h4, h5, h6,
+		.h1, .h2, .h3, .h4, .h5, .h6{
+
+		}
+
+		h1, .h1{
+
+		}
+		h2, .h2{
+
+		}
+		h3, .h3{
+
+		}
+		h4, .h4{
+
+		}
+		h5, .h5{
+
+		}
+		h6, .h6{
+
+		}
+	}
+
+	.alternate_color{
+		background-color: $black;
+		color: $white;
+		
+		a:not([class*='button']){
+
+		}
+
+		h1, h2, h3, h4, h5, h6,
+		.h1, .h2, .h3, .h4, .h5, .h6{
+			
+		}
+
+		h1, .h1{
+
+		}
+		h2, .h2{
+
+		}
+		h3, .h3{
+
+		}
+		h4, .h4{
+
+		}
+		h5, .h5{
+
+		}
+		h6, .h6{
+			
+		}
+	}
+
+}
